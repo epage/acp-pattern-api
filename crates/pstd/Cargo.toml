@@ -1,0 +1,25 @@
+[package]
+name = "pstd"
+version = "0.0.1"
+description = "pseudo `std` lib"
+categories = []
+keywords = []
+publish = false
+repository.workspace = true
+license.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+include.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
+
+[features]
+default = []
+
+[dependencies]
+pcore = { version = "0.0.1", path = "../pcore" }
+
+[lints]
+workspace = true
